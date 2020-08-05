@@ -7,7 +7,7 @@ super + F11
 super + Return
 	$TERMINAL
 #Launch Transmission
-super + t
+super + T 
 	transmission-qt
 
 #Launch dmenu
@@ -17,14 +17,21 @@ super + p
 #Launch web browser
 super + w
 	$BROWSER
+#Launch surf
+super + s
+	surf
 
 #Launch E-mail
 super + e
-	mbsync anc && $TERMINAL -e neomutt
+	$TERMINAL -e neomutt
 
-#Launch Music
-super + i 
-	$TERMINAL -e ncmpcpp -S "visualizer"
+#Launch Music[ncmpcpp]
+super + O 
+	$TERMINAL -e ncmpcpp
+
+#Launch Music[mpdmenu]
+super + o
+	mpdmenu
 
 #Check Weather
 super + F12
@@ -32,9 +39,9 @@ super + F12
 
 # Audiokeys
 XF86AudioMute
-	amixer sset Master toggle; refbar 
+	amixer sset Master toggle; 
 XF86Audio{Raise,Lower}Volume
-	amixer sset Master 5%{+,-}; refbar 
+	amixer sset Master 5%{+,-}; 
 XF86Audio{Next,Prev}
 	mpc {next,prev}
 XF86Audio{Play}

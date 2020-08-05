@@ -1,7 +1,10 @@
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="surf"
+export BROWSER="brave"
 export XDG_CONFIG_HOME="$HOME/.config"
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export XDG_DATA_HOME="$HOME/.local/share"
+export LANG="en_US.UTF-8"
+export IDENTIFIER="unicode"
 [ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec startx

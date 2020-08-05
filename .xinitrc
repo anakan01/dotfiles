@@ -1,10 +1,10 @@
-dwm &
-gpg-agent &
+dwm & 
 mpd &
-sbar &
-picom -I 1 -O 1 & 
-setbg &
-sxhkd &
+picom --no-fading-openclose & 
+feh --bg-fill -z ~/.local/share/Wallpapers &
+sxhkd & 
 amixer sset Master 25% &
-unclutter 
-
+unclutter &
+pkcheck &
+statusbar & 
+xautolock -time 20 -locker slock

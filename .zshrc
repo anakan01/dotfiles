@@ -11,8 +11,9 @@ autoload -Uz compinit
 compinit
 autoload -Uz promptinit
 promptinit
-prompt walters
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
 . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 GPG_TTY=$(tty)
 export GPG_TTY
+autoload -U colors && colors
+PS1="%B%{$fg[green]%}[%{$fg[red]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[green]%}]%{$reset_color%}$%b "
